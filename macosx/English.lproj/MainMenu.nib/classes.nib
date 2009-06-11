@@ -1,0 +1,21 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {breakNow = id; checkForUpdate = id; gotoWebsite = id; postpone = id; }; 
+            CLASS = AntiRSI; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "next_break" = NSTextField; 
+                postpone = NSButton; 
+                progress = NSProgressIndicator; 
+                time = NSTextField; 
+                version = NSTextField; 
+                view = AntiRSIView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = AntiRSIView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}
