@@ -11,21 +11,21 @@
 
 #define sLatestVersionURL @"http://tech.inhelsinki.nl/antirsi/antirsi_version.txt"
 #define sURL @"http://tech.inhelsinki.nl/antirsi/"
-#define sVersion @"1.4"
+#define sVersion @"2.0pre1"
+
+#define sMicroPause @"Micro Pause"
+#define sWorkBreak  @"Work Break"
 
 @interface AntiRSI : NSObject
 {
 	// views to display current status in
 	IBOutlet AntiRSIView *view;
 	IBOutlet NSProgressIndicator *progress;
-	IBOutlet NSButton *postpone;
+	IBOutlet AntiRSIButton *postpone;
+    IBOutlet NSTextField *label;
 	IBOutlet NSTextField *time;
 	IBOutlet NSTextField *next_break;
 	IBOutlet NSTextField *version;
-	
-	// images
-	NSImage* micro_pause_image;
-	NSImage* work_break_image;
 	
 	// dock icon image
 	NSImage* dock_image;

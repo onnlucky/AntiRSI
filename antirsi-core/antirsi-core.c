@@ -8,8 +8,6 @@
  *
  * emit lock focus and have setting for it
  *
- * implement networking udp broadcasting with encryption and HUP is 1
- *
  * implement a smarter algorithm for setting and predicting breaks,
  * maybe include scheduling static events, like tee or food and end of work day ...
  */

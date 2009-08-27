@@ -8,11 +8,10 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="433"/>
-			<integer value="29"/>
-			<integer value="21"/>
 			<integer value="259"/>
 			<integer value="343"/>
+			<integer value="29"/>
+			<integer value="434"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -53,7 +52,7 @@
 				<string key="NSWindowContentMaxSize">{3.40282e+38, 3.40282e+38}</string>
 				<string key="NSWindowContentMinSize">{213, 107}</string>
 				<object class="NSView" key="NSWindowView" id="885626644">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -835,7 +834,6 @@
 						</object>
 					</object>
 					<string key="NSFrameSize">{495, 428}</string>
-					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1280, 832}}</string>
 				<string key="NSMinSize">{213, 129}</string>
@@ -1210,7 +1208,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="NSProgressIndicator" id="310163919">
 						<reference key="NSNextResponder" ref="470721316"/>
-						<int key="NSvFlags">1280</int>
+						<int key="NSvFlags">1314</int>
 						<object class="NSPSMatrix" key="NSDrawMatrix"/>
 						<string key="NSFrame">{{8, 83}, {284, 20}}</string>
 						<reference key="NSSuperview" ref="470721316"/>
@@ -1219,8 +1217,8 @@
 					</object>
 					<object class="NSButton" id="829121298">
 						<reference key="NSNextResponder" ref="470721316"/>
-						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{184, 14}, {102, 32}}</string>
+						<int key="NSvFlags">289</int>
+						<string key="NSFrame">{{178, 21}, {102, 32}}</string>
 						<reference key="NSSuperview" ref="470721316"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="9244890">
@@ -1240,7 +1238,7 @@
 					</object>
 					<object class="NSTextField" id="214808954">
 						<reference key="NSNextResponder" ref="470721316"/>
-						<int key="NSvFlags">256</int>
+						<int key="NSvFlags">289</int>
 						<string key="NSFrame">{{169, 111}, {94, 17}}</string>
 						<reference key="NSSuperview" ref="470721316"/>
 						<bool key="NSEnabled">YES</bool>
@@ -1259,7 +1257,7 @@
 					</object>
 					<object class="NSTextField" id="900464902">
 						<reference key="NSNextResponder" ref="470721316"/>
-						<int key="NSvFlags">256</int>
+						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{35, 62}, {248, 17}}</string>
 						<reference key="NSSuperview" ref="470721316"/>
 						<bool key="NSEnabled">YES</bool>
@@ -1276,9 +1274,78 @@
 							</object>
 						</object>
 					</object>
+					<object class="NSTextField" id="813798886">
+						<reference key="NSNextResponder" ref="470721316"/>
+						<int key="NSvFlags">306</int>
+						<string key="NSFrame">{{17, 145}, {266, 44}}</string>
+						<reference key="NSSuperview" ref="470721316"/>
+						<bool key="NSEnabled">YES</bool>
+						<object class="NSTextFieldCell" key="NSCell" id="381664306">
+							<int key="NSCellFlags">67239424</int>
+							<int key="NSCellFlags2">138412032</int>
+							<string key="NSContents">Work Break</string>
+							<object class="NSFont" key="NSSupport">
+								<string key="NSName">LucidaGrande</string>
+								<double key="NSSize">3.600000e+01</double>
+								<int key="NSfFlags">16</int>
+							</object>
+							<reference key="NSControlView" ref="813798886"/>
+							<object class="NSColor" key="NSBackgroundColor">
+								<int key="NSColorSpace">1</int>
+								<bytes key="NSRGB">MCAwIDAAA</bytes>
+							</object>
+							<object class="NSColor" key="NSTextColor">
+								<int key="NSColorSpace">1</int>
+								<bytes key="NSRGB">MSAxIDEAA</bytes>
+							</object>
+						</object>
+					</object>
 				</object>
 				<string key="NSFrameSize">{300, 300}</string>
 				<reference key="NSSuperview"/>
+				<object class="NSDictionary" key="NSViewAnimations">
+					<string key="NS.key.0">subviews</string>
+					<object class="CATransition" key="NS.object.0">
+						<real value="1.000000e+00" key="endProgress"/>
+						<object class="CIDissolveTransition" key="filter">
+							<real value="0.000000e+00" key="CI_inputTime"/>
+							<bool key="CIEnabled">YES</bool>
+						</object>
+						<real value="0.000000e+00" key="startProgress"/>
+						<string key="subtype">fromTop</string>
+						<integer value="0" key="transitionFlags" id="8"/>
+						<string key="type">fade</string>
+						<reference key="autoreverses" ref="8"/>
+						<real value="0.000000e+00" key="beginTime"/>
+						<real value="0.000000e+00" key="duration"/>
+						<string key="fillMode">removed</string>
+						<real value="0.000000e+00" key="frameInterval"/>
+						<integer value="1" key="removedOnCompletion"/>
+						<real value="0.000000e+00" key="repeatCount"/>
+						<real value="0.000000e+00" key="repeatDuration"/>
+						<real value="1.000000e+00" key="speed"/>
+						<real value="0.000000e+00" key="timeOffset"/>
+						<object class="NSArray" key="__CACodingContents">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>autoreverses</string>
+							<string>beginTime</string>
+							<string>duration</string>
+							<string>endProgress</string>
+							<string>fillMode</string>
+							<string>filter</string>
+							<string>frameInterval</string>
+							<string>removedOnCompletion</string>
+							<string>repeatCount</string>
+							<string>repeatDuration</string>
+							<string>speed</string>
+							<string>startProgress</string>
+							<string>subtype</string>
+							<string>timeOffset</string>
+							<string>transitionFlags</string>
+							<string>type</string>
+						</object>
+					</object>
+				</object>
 				<string key="NSClassName">AntiRSIView</string>
 				<string key="NSExtension">NSView</string>
 			</object>
@@ -1983,6 +2050,14 @@
 					</object>
 					<int key="connectionID">452</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">label</string>
+						<reference key="source" ref="338670974"/>
+						<reference key="destination" ref="813798886"/>
+					</object>
+					<int key="connectionID">493</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -2432,9 +2507,10 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="310163919"/>
-							<reference ref="829121298"/>
 							<reference ref="214808954"/>
 							<reference ref="900464902"/>
+							<reference ref="813798886"/>
+							<reference ref="829121298"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">AntiRSIView</string>
@@ -2921,6 +2997,20 @@
 						<reference key="object" ref="200761011"/>
 						<reference key="parent" ref="640054052"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">491</int>
+						<reference key="object" ref="813798886"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="381664306"/>
+						</object>
+						<reference key="parent" ref="470721316"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">492</int>
+						<reference key="object" ref="381664306"/>
+						<reference key="parent" ref="813798886"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -2929,6 +3019,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>-1.IBPluginDependency</string>
 					<string>-2.IBPluginDependency</string>
+					<string>-3.IBPluginDependency</string>
 					<string>103.IBPluginDependency</string>
 					<string>103.ImportedFromIB2</string>
 					<string>106.IBPluginDependency</string>
@@ -3021,6 +3112,7 @@
 					<string>259.ImportedFromIB2</string>
 					<string>260.IBPluginDependency</string>
 					<string>260.ImportedFromIB2</string>
+					<string>261.CustomClassName</string>
 					<string>261.IBPluginDependency</string>
 					<string>261.ImportedFromIB2</string>
 					<string>279.IBPluginDependency</string>
@@ -3112,6 +3204,43 @@
 					<string>446.ImportedFromIB2</string>
 					<string>451.IBPluginDependency</string>
 					<string>451.ImportedFromIB2</string>
+					<string>454.IBPluginDependency</string>
+					<string>455.IBPluginDependency</string>
+					<string>456.IBPluginDependency</string>
+					<string>457.IBPluginDependency</string>
+					<string>458.IBPluginDependency</string>
+					<string>459.IBPluginDependency</string>
+					<string>460.IBPluginDependency</string>
+					<string>461.IBPluginDependency</string>
+					<string>462.IBPluginDependency</string>
+					<string>463.IBPluginDependency</string>
+					<string>464.IBPluginDependency</string>
+					<string>465.IBPluginDependency</string>
+					<string>466.IBPluginDependency</string>
+					<string>467.IBPluginDependency</string>
+					<string>468.IBPluginDependency</string>
+					<string>469.IBPluginDependency</string>
+					<string>470.IBPluginDependency</string>
+					<string>471.IBPluginDependency</string>
+					<string>472.IBPluginDependency</string>
+					<string>473.IBPluginDependency</string>
+					<string>474.IBPluginDependency</string>
+					<string>475.IBPluginDependency</string>
+					<string>476.IBPluginDependency</string>
+					<string>477.IBPluginDependency</string>
+					<string>478.IBPluginDependency</string>
+					<string>479.IBPluginDependency</string>
+					<string>480.IBPluginDependency</string>
+					<string>481.IBPluginDependency</string>
+					<string>482.IBPluginDependency</string>
+					<string>483.IBPluginDependency</string>
+					<string>484.IBPluginDependency</string>
+					<string>485.IBPluginDependency</string>
+					<string>486.IBPluginDependency</string>
+					<string>487.IBPluginDependency</string>
+					<string>488.IBPluginDependency</string>
+					<string>491.IBPluginDependency</string>
+					<string>492.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
 					<string>5.ImportedFromIB2</string>
 					<string>56.IBPluginDependency</string>
@@ -3125,6 +3254,7 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3185,8 +3315,8 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
-					<string>{{98, 294}, {495, 428}}</string>
-					<string>{{98, 294}, {495, 428}}</string>
+					<string>{{165, 134}, {495, 428}}</string>
+					<string>{{165, 134}, {495, 428}}</string>
 					<reference ref="5"/>
 					<reference ref="5"/>
 					<string>{213, 107}</string>
@@ -3242,11 +3372,12 @@
 					<reference ref="5"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
-					<string>{{77, 445}, {300, 300}}</string>
+					<string>{{213, 158}, {300, 300}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
+					<string>AntiRSIButton</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3264,7 +3395,7 @@
 					<reference ref="5"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
-					<string>{{87, 691}, {186, 43}}</string>
+					<string>{{78, 210}, {186, 43}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3367,6 +3498,43 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
@@ -3398,7 +3566,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">488</int>
+			<int key="maxID">493</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3427,6 +3595,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>label</string>
 							<string>next_break</string>
 							<string>postpone</string>
 							<string>progress</string>
@@ -3437,7 +3606,8 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSTextField</string>
-							<string>NSButton</string>
+							<string>NSTextField</string>
+							<string>AntiRSIButton</string>
 							<string>NSProgressIndicator</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
@@ -3458,12 +3628,17 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">AntiRSIView</string>
-					<string key="superclassName">NSView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+					<string key="className">AntiRSIButton</string>
+					<string key="superclassName">NSButton</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="885392665">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">AntiRSIView.h</string>
 					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">AntiRSIView</string>
+					<string key="superclassName">NSView</string>
+					<reference key="sourceIdentifier" ref="885392665"/>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">AntiRSIView</string>
@@ -3475,6 +3650,7 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">FirstResponder</string>
+					<string key="superclassName">NSObject</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBUserSource</string>
 						<string key="minorKey"/>

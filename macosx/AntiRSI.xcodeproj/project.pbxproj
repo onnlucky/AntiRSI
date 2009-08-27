@@ -12,8 +12,6 @@
 		4DB6164E061B59EA002EF355 /* AntiRSI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DB6164C061B59EA002EF355 /* AntiRSI.h */; };
 		4DB6164F061B59EA002EF355 /* AntiRSI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6164D061B59EA002EF355 /* AntiRSI.m */; };
 		4DF73BC8061DAB3B00B0D9C9 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF73BC7061DAB3B00B0D9C9 /* ScreenSaver.framework */; };
-		4DF73E6E061DF49700B0D9C9 /* micro_pause.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4DF73E6C061DF49700B0D9C9 /* micro_pause.tiff */; };
-		4DF73E6F061DF49700B0D9C9 /* work_break.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4DF73E6D061DF49700B0D9C9 /* work_break.tiff */; };
 		4DF73F67061E136200B0D9C9 /* AntiRSIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF73F65061E136200B0D9C9 /* AntiRSIView.m */; };
 		4DF73F68061E136200B0D9C9 /* AntiRSIView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF73F66061E136200B0D9C9 /* AntiRSIView.h */; };
 		4DF73F86061E155C00B0D9C9 /* AntiRSI.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4DF73F85061E155C00B0D9C9 /* AntiRSI.icns */; };
@@ -36,8 +34,6 @@
 		4DB6164C061B59EA002EF355 /* AntiRSI.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AntiRSI.h; sourceTree = "<group>"; };
 		4DB6164D061B59EA002EF355 /* AntiRSI.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AntiRSI.m; sourceTree = "<group>"; };
 		4DF73BC7061DAB3B00B0D9C9 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = /System/Library/Frameworks/ScreenSaver.framework; sourceTree = "<absolute>"; };
-		4DF73E6C061DF49700B0D9C9 /* micro_pause.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = micro_pause.tiff; sourceTree = "<group>"; };
-		4DF73E6D061DF49700B0D9C9 /* work_break.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = work_break.tiff; sourceTree = "<group>"; };
 		4DF73F65061E136200B0D9C9 /* AntiRSIView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AntiRSIView.m; sourceTree = "<group>"; };
 		4DF73F66061E136200B0D9C9 /* AntiRSIView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AntiRSIView.h; sourceTree = "<group>"; };
 		4DF73F85061E155C00B0D9C9 /* AntiRSI.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AntiRSI.icns; sourceTree = "<group>"; };
@@ -124,8 +120,6 @@
 			children = (
 				EEA827B00FE0D04B009F8249 /* MainMenu.xib */,
 				4DF73F85061E155C00B0D9C9 /* AntiRSI.icns */,
-				4DF73E6C061DF49700B0D9C9 /* micro_pause.tiff */,
-				4DF73E6D061DF49700B0D9C9 /* work_break.tiff */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
@@ -200,8 +194,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				4DF73E6E061DF49700B0D9C9 /* micro_pause.tiff in Resources */,
-				4DF73E6F061DF49700B0D9C9 /* work_break.tiff in Resources */,
 				4DF73F86061E155C00B0D9C9 /* AntiRSI.icns in Resources */,
 				EEA827B20FE0D04B009F8249 /* MainMenu.xib in Resources */,
 			);

@@ -6,11 +6,5 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AntiRSIView : NSView
-{
-	NSImage* _image;
-}
-
-- (void)setImage:(NSImage *)image;
-
-@end
+@interface AntiRSIView   : NSView   { } @end
+@interface AntiRSIButton : NSButton { } @end

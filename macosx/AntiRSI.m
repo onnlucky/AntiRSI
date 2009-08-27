@@ -4,20 +4,16 @@
  * license: GPL
  *
  * TODO
- * use cached information in menu for take break now
+ * use cached information in menu for take break now/continue work break
  * clean up from old antirsi, like mini_break was micro_pause ...
+ * investigate in status bar
+ * use new style dockicon api
  */
 
 #import "AntiRSI.h"
 
 #include <math.h>
-
-// reverse enginered object, might change in the future, but does work now ...
-@interface ScreenSaverUserInfo:NSObject
-{}
-+ sharedInstance;
-- (double)idleTime;
-@end
+#include <ApplicationServices/ApplicationServices.h>
 
 // entry functions from antirsi-core
 
@@ -49,30 +45,15 @@ static void handle_status_update(void * data) {
 @implementation AntiRSI
 
 // bindings methods
-- (void)setMicro_pause_duration:(float)f
-{ core->mini_duration = round(f); }
+- (void)setMicro_pause_duration:(float)f { core->mini_duration = round(f); }
+- (void)setMicro_pause_period:(float)f   { core->mini_interval = 60 * round(f); }
+- (void)setWork_break_duration:(float)f  { core->work_duration = 60 * round(f); }
+- (void)setWork_break_period:(float)f   { core->work_interval = 60 * round(f); }
 
-- (void)setMicro_pause_period:(float)f
-{ core->mini_interval = 60 * round(f); }
-
-- (void)setWork_break_duration:(float)f
-{ core->work_duration = 60 * round(f); }
-
-- (void)setWork_break_period:(float)f
-{ core->work_interval = 60 * round(f); }
-
-- (float)getMicro_pause_duration
-{ return core->mini_duration; }
-
-- (float)getMicro_pause_period
-{ return core->mini_interval; }
-
-- (float)getWork_break_duration
-{ return core->work_duration; }
-
-- (float)getWork_break_period
-{ return core->work_interval; }
-
+- (float)getMicro_pause_duration { return core->mini_duration; }
+- (float)getMicro_pause_period   { return core->mini_interval; }
+- (float)getWork_break_duration  { return core->work_duration; }
+- (float)getWork_break_period    { return core->work_interval; }
 
 - (void)installTimer:(double)interval
 {
@@ -80,8 +61,10 @@ static void handle_status_update(void * data) {
 		[mtimer invalidate];
 		[mtimer autorelease];
 	}
-	mtimer = [[NSTimer scheduledTimerWithTimeInterval:interval target:self selector:@selector(tick:)
-  											userInfo:nil repeats:YES] retain];
+	mtimer = [[NSTimer scheduledTimerWithTimeInterval:interval
+                                               target:self
+                                             selector:@selector(tick:)
+  											 userInfo:nil repeats:YES] retain];
 }
 
 - (void)setSample_interval:(NSString *)s
@@ -159,10 +142,6 @@ static void handle_status_update(void * data) {
 	core->emit_status_update = handle_status_update;
 
 	sample_interval = 1;
-	
-	// setup images
-	micro_pause_image = [NSImage imageNamed:@"micro_pause"];
-	work_break_image = [NSImage imageNamed:@"work_break"];
 
 	// initialize dock image
 	dock_image = [[NSImage alloc] initWithSize:NSMakeSize(128,128)];
@@ -228,14 +207,13 @@ static void handle_status_update(void * data) {
 }
 
 // tick every second and update status
-- (void)tick:(NSTimer *)timer
-{
-	double idle_time = [[ScreenSaverUserInfo sharedInstance] idleTime];
-	
+- (void)tick:(NSTimer *)timer {
+    
+    CFTimeInterval idle_time = CGEventSourceSecondsSinceLastEventType(kCGEventSourceStateHIDSystemState, kCGAnyInputEventType);
 	ai_tick(core, idle_time);
 }
 
-// draw the dock icon
+// draw the break window progress bar and such
 - (void)drawBreakWindow
 {
 	// update window
@@ -334,7 +312,7 @@ static void handle_status_update(void * data) {
 // display micro_pause window with appropriate widgets and progress bar
 - (void)doMicroPause
 {
-	[view setImage:micro_pause_image];
+	[label setStringValue: sMicroPause];
 	[progress setDoubleValue:ai_break_progress(core)];
 	[postpone setHidden:YES];
 	[self drawTimeLeft:ai_break_time_left(core)];
@@ -357,7 +335,7 @@ static void handle_status_update(void * data) {
 	//	work_break_taking_t = work_break_taking_cached_t;
 	//}
 	
-	[view setImage:work_break_image];
+	[label setStringValue: sWorkBreak];
 	[progress setDoubleValue:ai_break_progress(core)];
 	[postpone setHidden:NO];
 	[self drawTimeLeft:ai_break_time_left(core)];
@@ -455,7 +433,6 @@ static void handle_status_update(void * data) {
 	return NO;
 }
 
-// we are delegate of NSApplication, so we can restore the icon on quit.
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {
 	// make sure timer doesn't tick once more ...
@@ -464,13 +441,6 @@ static void handle_status_update(void * data) {
 	[mtimer autorelease];
 	mtimer = nil;
 	[dock_image release];
-	// stupid fix for icon beeing restored ... it is not my fault,
-	// the dock or NSImage or setApplicationIconImage seem to be caching or taking
-	// snapshot or something ... !
-	[NSApp setApplicationIconImage:original_dock_image];
-	[NSThread sleepUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
-	[NSApp setApplicationIconImage:original_dock_image];
-
 }
 
 @end
