@@ -48,12 +48,12 @@ static void handle_status_update(void * data) {
 - (void)setMicro_pause_duration:(float)f { core->mini_duration = round(f); }
 - (void)setMicro_pause_period:(float)f   { core->mini_interval = 60 * round(f); }
 - (void)setWork_break_duration:(float)f  { core->work_duration = 60 * round(f); }
-- (void)setWork_break_period:(float)f   { core->work_interval = 60 * round(f); }
+- (void)setWork_break_period:(float)f    { core->work_interval = 60 * round(f); }
 
-- (float)getMicro_pause_duration { return core->mini_duration; }
-- (float)getMicro_pause_period   { return core->mini_interval; }
-- (float)getWork_break_duration  { return core->work_duration; }
-- (float)getWork_break_period    { return core->work_interval; }
+- (float)micro_pause_duration { return core->mini_duration; }
+- (float)micro_pause_period   { return core->mini_interval; }
+- (float)work_break_duration  { return core->work_duration; }
+- (float)work_break_period    { return core->work_interval; }
 
 - (void)installTimer:(double)interval
 {
@@ -82,7 +82,7 @@ static void handle_status_update(void * data) {
 {
 	draw_dock_image=b;
 	if (!b) {
-		[NSApp setApplicationIconImage:[NSImage imageNamed:@"AntiRSI"]];
+		[NSApp setApplicationIconImage: original_dock_image];
 	} else {
 		[self drawDockImage];
 	}
@@ -209,6 +209,7 @@ static void handle_status_update(void * data) {
 // tick every second and update status
 - (void)tick:(NSTimer *)timer {
     
+    // still even iTunes posts HID events to prevent screen blanks and screen saver ... ugly
     CFTimeInterval idle_time = CGEventSourceSecondsSinceLastEventType(kCGEventSourceStateHIDSystemState, kCGAnyInputEventType);
 	ai_tick(core, idle_time);
 }
@@ -326,15 +327,7 @@ static void handle_status_update(void * data) {
 
 // display work_break window with appropriate widgets and progress bar
 - (void)doWorkBreak
-{
-	// incase you were already having an implicit work break and clicked the take work break now button
-	// not more then 20 seconds ago we took a natural break longer then 0.2 * normal work break duration
-	
-	// TODO reinstate this feature but nicer, make sure menu reflects this ...
-	//if (date - work_break_taking_cached_date < 20 && work_break_taking_cached_t > work_break_duration * 0.2) {
-	//	work_break_taking_t = work_break_taking_cached_t;
-	//}
-	
+{	
 	[label setStringValue: sWorkBreak];
 	[progress setDoubleValue:ai_break_progress(core)];
 	[postpone setHidden:NO];
@@ -416,21 +409,22 @@ static void handle_status_update(void * data) {
 }
 
 // validate menu items
-- (BOOL)validateMenuItem:(NSMenuItem *)anItem
-{
-	if ([[anItem title] isEqualToString:@"Take Break Now"] && core->state == S_NORMAL) {
-		return YES;
+- (BOOL)validateMenuItem:(NSMenuItem *)menu {
+    
+    if (menu == menuBreakNow || menu == dockBreakNow) {
+        if (ai_can_continue_natural_break(core)) {
+            [menu setTitle: @"Continue Work Break"];
+        } else {
+            [menu setTitle: @"Take Break Now"];
+        }
+        return core->state == S_NORMAL;
+    }
+    	
+	if (menu == menuPostpone || menu == dockPostpone) {
+        return core->state == S_IN_WORK;
 	}
 	
-	if ([[anItem title] isEqualToString:@"Postpone Break"] && core->state == S_IN_WORK) {
-		return YES;
-	}
-	
-	if ([[anItem title] isEqualToString:@"AntiRSI Help"]) {
-		return YES;
-	}
-	
-	return NO;
+	return YES;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
@@ -441,6 +435,9 @@ static void handle_status_update(void * data) {
 	[mtimer autorelease];
 	mtimer = nil;
 	[dock_image release];
+    
+    // and make sure to show original dock image
+    [NSApp setApplicationIconImage: original_dock_image];
 }
 
 @end

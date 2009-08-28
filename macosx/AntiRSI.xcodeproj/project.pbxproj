@@ -11,7 +11,6 @@
 		036E7B440A5C47C800D38801 /* antirsi-core.h in Headers */ = {isa = PBXBuildFile; fileRef = 036E7B430A5C47C700D38801 /* antirsi-core.h */; };
 		4DB6164E061B59EA002EF355 /* AntiRSI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DB6164C061B59EA002EF355 /* AntiRSI.h */; };
 		4DB6164F061B59EA002EF355 /* AntiRSI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6164D061B59EA002EF355 /* AntiRSI.m */; };
-		4DF73BC8061DAB3B00B0D9C9 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF73BC7061DAB3B00B0D9C9 /* ScreenSaver.framework */; };
 		4DF73F67061E136200B0D9C9 /* AntiRSIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF73F65061E136200B0D9C9 /* AntiRSIView.m */; };
 		4DF73F68061E136200B0D9C9 /* AntiRSIView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF73F66061E136200B0D9C9 /* AntiRSIView.h */; };
 		4DF73F86061E155C00B0D9C9 /* AntiRSI.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4DF73F85061E155C00B0D9C9 /* AntiRSI.icns */; };
@@ -48,7 +47,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				4DF73BC8061DAB3B00B0D9C9 /* ScreenSaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +275,7 @@
 				DEPLOYMENT_LOCATION = NO;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_GC = NO;
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -288,9 +287,11 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = AntiRSI;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",

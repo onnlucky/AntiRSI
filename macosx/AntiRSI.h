@@ -26,6 +26,11 @@
 	IBOutlet NSTextField *time;
 	IBOutlet NSTextField *next_break;
 	IBOutlet NSTextField *version;
+    
+    IBOutlet NSMenuItem *menuBreakNow;
+    IBOutlet NSMenuItem *dockBreakNow;
+    IBOutlet NSMenuItem *menuPostpone;
+    IBOutlet NSMenuItem *dockPostpone;
 	
 	// dock icon image
 	NSImage* dock_image;
