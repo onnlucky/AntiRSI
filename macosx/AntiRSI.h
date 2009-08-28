@@ -11,7 +11,7 @@
 
 #define sLatestVersionURL @"http://tech.inhelsinki.nl/antirsi/antirsi_version.txt"
 #define sURL @"http://tech.inhelsinki.nl/antirsi/"
-#define sVersion @"2.0pre1"
+#define sVersion @"2.0"
 
 #define sMicroPause @"Micro Pause"
 #define sWorkBreak  @"Work Break"
