@@ -8,3 +8,4 @@
 
 @interface AntiRSIView   : NSView   { } @end
 @interface AntiRSIButton : NSButton { } @end
+
