@@ -345,6 +345,7 @@
 		03C29A060945B33D00639E3E /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_VERSION = 2.1;
 				ARCHS = "${NATIVE_ARCH}";
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
@@ -354,6 +355,7 @@
 		03C29A070945B33D00639E3E /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_VERSION = 2.1;
 				ARCHS = (
 					ppc,
 					i386,
@@ -366,6 +368,7 @@
 		03C29A080945B33D00639E3E /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_VERSION = 2.1;
 				ARCHS = "${NATIVE_ARCH}";
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;

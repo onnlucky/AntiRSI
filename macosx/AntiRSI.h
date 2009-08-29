@@ -11,7 +11,6 @@
 
 #define sLatestVersionURL @"http://tech.inhelsinki.nl/antirsi/antirsi_version.txt"
 #define sURL @"http://tech.inhelsinki.nl/antirsi/"
-#define sVersion @"2.0"
 
 #define sMicroPause @"Micro Pause"
 #define sWorkBreak  @"Work Break"
@@ -54,6 +53,8 @@
     NSColor* elapsed;
     NSColor* background;
     NSColor* darkbackground;
+    
+    NSString *sVersion;
 
     ai_core * core;
 }

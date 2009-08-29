@@ -201,6 +201,7 @@ static void handle_status_update(void * data) {
     [self installTimer:sample_interval];
 
     // about dialog
+    sVersion = [[NSString stringWithFormat:@"%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]] retain];
     [version setStringValue:[NSString stringWithFormat:@"Version %@", sVersion]];
 
     // TODO remove?
@@ -368,10 +369,9 @@ static void handle_status_update(void * data) {
 // check for update
 - (IBAction)checkForUpdate:(id)sender
 {
-    NSString *latest_version =
-    [NSString stringWithContentsOfURL: [NSURL URLWithString:sLatestVersionURL]];
-
+    NSString *latest_version = [NSString stringWithContentsOfURL: [NSURL URLWithString:sLatestVersionURL]];
     if (latest_version == Nil) latest_version = @"";
+    
     latest_version = [latest_version stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 
     if ([latest_version length] == 0) {
