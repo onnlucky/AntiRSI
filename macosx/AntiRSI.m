@@ -305,7 +305,7 @@ static void handle_status_update(void * data) {
 - (void)endBreak {
     [[main_window animator] setAlphaValue:0.0];
     // what is the consequence of hiding it, instead of ordering it out??
-    //[[main_window animator] orderOut:NULL];
+    //[main_window orderOut:NULL];
 
     // reset time interval to user's choice
     [self installTimer:sample_interval];
