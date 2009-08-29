@@ -9,7 +9,7 @@
 @implementation AntiRSIView
 
 - (void)drawRect:(NSRect)rect {
-    NSColor *bgColor = [NSColor colorWithCalibratedWhite:0.0 alpha:0.95];
+    NSColor *bgColor = [NSColor colorWithCalibratedWhite:0.0 alpha:0.85];
 
     NSRect bgRect = [self frame];
     int minX = NSMinX(bgRect);
